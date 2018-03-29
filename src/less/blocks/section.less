@@ -1,0 +1,32 @@
+.section {
+  min-height: 900px;
+  background-color: #999999;
+}
+
+.section-list {
+  .row-flex();
+  .list-reset();
+  justify-content: center;
+  margin-top: 20px;
+  padding-top: 20px;
+}
+
+.section-item {
+  .col();
+  .size(3);
+  .size-md(4);
+  .size-sm(8);
+  .size-xs(12);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background-color: white;
+
+  a {
+    color: red;
+    text-decoration: none;
+  }
+}
