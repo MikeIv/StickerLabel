@@ -8,7 +8,6 @@
 build/
 node_modules/
 npm-debug.*
-doc/
 build/
 inbox/
 Thumbs.db
