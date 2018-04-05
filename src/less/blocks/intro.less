@@ -1,31 +1,19 @@
 .intro {
-  .row-flex();
-
   position: relative;
-
+  width: 100%;
+  min-height: 400px;
   margin-top: 100px;
-
-  padding-top: 20px;
-  padding-bottom: 20px;
-
-  /*
-  background-image: url(../img/bg-circle-white.svg);
-  background-position: top center, 50% 0%;
-  background-repeat: no-repeat;
-  background-size: contain;
-
-  */
-
+  overflow-x: hidden;
   background-color: fade(@light, 60%);
 
   &::before {
     content: "";
     position: absolute;
-    top: 0;
+    top: -100px;
     left: 50%;
-    width: 2000px;
-    height: 200px;
-    margin-left: -1000px;
+    width: 4000px;
+    height: 350px;
+    margin-left: -2000px;
     background-image: url("../img/bg-circle-white.svg");
     background-repeat: no-repeat;
     background-position: top;
@@ -34,10 +22,11 @@
     z-index: 0;
   }
 
+  /*
   &::after {
     content: "";
     position: absolute;
-    bottom: -200px;
+    bottom: -90px;
     left: 50%;
     width: 2000px;
     height: 200px;
@@ -50,6 +39,7 @@
     z-index: 0;
   }
 
+*/
   .xxs-block({
     display: none;
   });
@@ -57,19 +47,22 @@
   .sm-block({
     display: block;
   });
+
 }
 
 .intro__list {
   .size-sm(16);
+  .size-lg(12);
+  .size-xlg(9);
 
   position: relative;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   align-items: center;
-  padding: 0;
+  margin-top: 55px;
   text-align: center;
-  background-color: fade(@white, 80%);
+  background-color: fade(@white, 90%);
   border-radius: 7px;
   box-shadow: 0 -1px 3px 2px fade(@gray, 30%);
   z-index: 10;
@@ -102,6 +95,50 @@
 .intro__item-03,
 .intro__item-04,
 .intro__item-05 {
+  position: relative;
   width: 48%;
-  background-color: @base;
+  background-color: @white;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 200px;
+    height: 70px;
+    margin-left: -100px;
+    font-size: 16px;
+    line-height: 58px;
+    text-transform: uppercase;
+    color: @white;
+    background-image: url("../img/bg_decor_nav-mobile_rot180.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    opacity: 0.8;
+  }
+}
+
+.intro__item-02 {
+  &::after {
+    content: "Стикер";
+  }
+}
+
+.intro__item-03 {
+  &::after {
+    content: "Наклейки";
+  }
+}
+
+.intro__item-04 {
+  &::after {
+    content: "Этикетки";
+  }
+}
+
+.intro__item-05 {
+  &::after {
+    content: "Гибкая упаковка";
+  }
 }

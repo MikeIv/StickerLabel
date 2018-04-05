@@ -11,6 +11,9 @@ var settings = {
     fields: '20px' /* side fields */
   },
   breakPoints: {
+    xlg: {
+      width: '1500px', /* -> @media (max-width: 1100px) */
+    },
     lg: {
       width: '1100px', /* -> @media (max-width: 1100px) */
     },

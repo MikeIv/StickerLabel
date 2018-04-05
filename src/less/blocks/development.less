@@ -1,0 +1,60 @@
+.development {
+  position: relative;
+  padding-top: 150px;
+  overflow-x: hidden;
+
+
+  .xxs-block({
+    display: none;
+  });
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -100px;
+    left: 50%;
+    width: 4000px;
+    height: 300px;
+    margin-left: -2000px;
+    background-image: url("../img/bg-circle-@light.svg");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 100%;
+    opacity: 0.6;
+    z-index: 0;
+  }
+
+  .sm-block({
+    display: flex;
+    justify-content: space-around;
+    min-height: 750px;
+    border-bottom: 1px solid @light;
+    background-image: url("../img/bg-develop-desktop@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: 100% auto;
+  });
+}
+
+.development__info {
+  .col();
+  .size-sm(10);
+  .size-lg(11);
+
+  padding-right: 10px;
+}
+
+.development__header {
+  .header();
+  padding-top: 80px;
+}
+
+.development__txt {
+  margin-bottom: 20px;
+  .txt();
+}
+
+.development__way {
+  .txt-list();
+}
+

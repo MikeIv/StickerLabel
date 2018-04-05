@@ -6,6 +6,7 @@
 @break_sm: 780px;
 @break_md: 960px;
 @break_lg: 1100px;
+@break_xlg: 1500px;
 
 @offset: 12px;
 @offset_xxs: 3px;
@@ -13,6 +14,7 @@
 @offset_sm: 12px;
 @offset_md: @offset_sm;
 @offset_lg: @offset_sm;
+@offset_xlg: @offset_sm;
 
 @offset_one_side: (@offset / 2);
 @offset_xxs_one_side: (@offset_xxs / 2);
@@ -20,6 +22,7 @@
 @offset_sm_one_side: (@offset_sm / 2);
 @offset_md_one_side: (@offset_md / 2);
 @offset_lg_one_side: (@offset_lg / 2);
+@offset_xlg_one_side: (@offset_xlg / 2);
 
 @fields: 20px;
 @fields_xxs: 5px;
@@ -149,6 +152,11 @@
 .size-lg(@n){
     @val: 100% / @columns * @n;
     .lg(width, ~"calc(@{val} - @{offset_lg})");
+}
+
+.size-xlg(@n){
+    @val: 100% / @columns * @n;
+    .xlg(width, ~"calc(@{val} - @{offset_xlg})");
 }
 
 .shift(@n){
@@ -343,6 +351,38 @@
     .lg(padding-right, ~"calc(@{val} + @{offset_lg_one_side})");
 }
 
+.shift-xlg(@n){
+    @val: 100% / @columns * @n;
+    .xlg(margin-left, ~"calc(@{val} + @{offset_xlg_one_side})");
+    .xlg(margin-right, ~"calc(@{val} + @{offset_xlg_one_side})");
+}
+
+.shift-xlg-left(@n){
+    @val: 100% / @columns * @n;
+    .xlg(margin-left, ~"calc(@{val} + @{offset_xlg_one_side})");
+}
+
+.shift-xlg-right(@n){
+    @val: 100% / @columns * @n;
+    .xlg(margin-right, ~"calc(@{val} + @{offset_xlg_one_side})");
+}
+
+.shift-xlg-padding(@n){
+    @val: 100% / @columns * @n;
+    .xlg(padding-left, ~"calc(@{val} + @{offset_xlg_one_side})");
+    .xlg(padding-right, ~"calc(@{val} + @{offset_xlg_one_side})");
+}
+
+.shift-xlg-padding-left(@n){
+    @val: 100% / @columns * @n;
+    .xlg(padding-left, ~"calc(@{val} + @{offset_xlg_one_side})");
+}
+
+.shift-xlg-padding-right(@n){
+    @val: 100% / @columns * @n;
+    .xlg(padding-right, ~"calc(@{val} + @{offset_xlg_one_side})");
+}
+
 .xxs(@name, @value){
     @media screen and (min-width: @break_xxs){
         @{name}: @value;
@@ -399,6 +439,18 @@
 
 .lg-block(@content){
     @media screen and (min-width: @break_lg){
+        @content();
+    }
+}
+
+.xlg(@name, @value){
+    @media screen and (min-width: @break_xlg){
+        @{name}: @value;
+    }
+}
+
+.xlg-block(@content){
+    @media screen and (min-width: @break_xlg){
         @content();
     }
 }
