@@ -1,0 +1,148 @@
+.production-intro {
+  position: relative;
+  width: 100%;
+  min-height: 400px;
+  margin-top: 100px;
+  overflow-x: hidden;
+  background-color: fade(@light, 60%);
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -100px;
+    left: 50%;
+    width: 4000px;
+    height: 350px;
+    margin-left: -2000px;
+    background-image: url("../img/bg-circle-white.svg");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 100%;
+    opacity: 0.9;
+    z-index: 0;
+  }
+
+  /*
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -90px;
+    left: 50%;
+    width: 2000px;
+    height: 200px;
+    margin-left: -1000px;
+    background-image: url("../img/bg-circle-@light.svg");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 100%;
+    opacity: 0.6;
+    z-index: 0;
+  }
+
+*/
+  .xxs-block({
+
+  });
+
+  .sm-block({
+
+  });
+
+}
+
+.production-intro__list {
+  .size-sm(16);
+  .size-lg(12);
+  .size-xlg(9);
+
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 55px;
+  text-align: center;
+  background-color: fade(@white, 90%);
+  border-radius: 7px;
+  box-shadow: 0 -1px 3px 2px fade(@gray, 30%);
+  z-index: 10;
+
+  .sm-block({
+    justify-content: space-between;
+  });
+}
+
+.production-intro__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100px;
+  margin-bottom: 10px;
+  margin-left: 5px;
+  margin-right: 5px;
+  font-size: 0;
+}
+
+.production-intro__item-01 {
+  width: 100%;
+
+  a {
+    font-size: 28px;
+    font-weight: 500;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: @base;
+  }
+}
+
+.production-intro__item-02,
+.production-intro__item-03,
+.production-intro__item-04,
+.production-intro__item-05 {
+  position: relative;
+  width: 48%;
+  background-color: @white;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 200px;
+    height: 70px;
+    margin-left: -100px;
+    font-size: 16px;
+    line-height: 58px;
+    text-transform: uppercase;
+    color: @white;
+    background-image: url("../img/bg_decor_nav-mobile_rot180.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    opacity: 0.9;
+  }
+}
+
+.production-intro__item-02 {
+  &::after {
+    content: "Стикер";
+  }
+}
+
+.production-intro__item-03 {
+  &::after {
+    content: "Наклейки";
+  }
+}
+
+.production-intro__item-04 {
+  &::after {
+    content: "Этикетки";
+  }
+}
+
+.production-intro__item-05 {
+  &::after {
+    content: "Упаковка";
+  }
+}
