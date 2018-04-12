@@ -24,10 +24,11 @@
 @offset_lg_one_side: (@offset_lg / 2);
 @offset_xlg_one_side: (@offset_xlg / 2);
 
-@fields: 20px;
-@fields_xxs: 5px;
+@fields: 40px;
+@fields_xxs: 10px;
 @fields_xs: 5px;
-@fields_sm: 12px;
+@fields_sm: 20px;
+@fields_xlg: 40px;
 
 .wrapper-full(){
     padding-left: @fields;
@@ -46,6 +47,11 @@
     .sm-block({
         padding-left: @fields_sm;
         padding-right: @fields_sm;
+    });
+
+    .xlg-block({
+        padding-left: @fields_xlg;
+        padding-right: @fields_xlg;
     });
 }
 

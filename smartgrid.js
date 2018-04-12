@@ -8,11 +8,12 @@ var settings = {
   mobileFirst: true, /* mobileFirst ? 'min-width' : 'max-width' */
   container: {
     maxWidth: '1420px', /* max-width оn very large screen */
-    fields: '20px' /* side fields */
+    fields: '40px' /* side fields */
   },
   breakPoints: {
     xlg: {
-      width: '1410px', /* -> @media (max-width: 1100px) */
+      width: '1410px',
+      fields: '40px'/* -> @media (max-width: 1100px) */
     },
     lg: {
       width: '1100px', /* -> @media (max-width: 1100px) */
@@ -22,7 +23,7 @@ var settings = {
     },
     sm: {
       width: '780px',
-      fields: '12px',
+      fields: '20px',
       offset: '12px'
     },
     xs: {
@@ -32,7 +33,7 @@ var settings = {
     },
     xxs: {
       width: '200px',
-      fields: '5px',
+      fields: '10px',
       offset: '3px'
     }
     /*
