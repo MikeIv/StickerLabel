@@ -137,9 +137,6 @@
 .main-nav--closed .main-nav__list {
   display: none;
 
-  .lg-block({
-    display: flex;
-  });
 }
 
 /* Реализация выпадающего меню END */
@@ -182,7 +179,7 @@
   width: 100%;
   margin-left: -30px;
   padding-top: 10px;
-  padding-bottom: 10px;
+  padding-bottom: 5px;
   padding-left: 10px;
   padding-right: 60px;
   background-color: @base;
@@ -192,7 +189,7 @@
     flex-basis: 290px;
     align-items: flex-start;
     padding-right: 15px;
-    padding-left: 10px;
+    padding-left: 20px;
     background-color: @light;
     border-radius: 7px;
 
@@ -203,14 +200,18 @@
 }
 
 .main-nav__phone-number {
-  font-size: 20px;
-  line-height: 28px;
-  color: @white;
 
-  .lg-block({
-    font-size: 23px;
-  border-bottom: 1px solid @white;
-  });
+  a {
+    font-size: 20px;
+    line-height: 28px;
+    color: @white;
+    text-decoration: none;
+
+    .lg-block({
+      font-size: 26px;
+      border-bottom: 1px solid @white;
+    });
+  }
 }
 
 .main-nav__schedule {
@@ -252,9 +253,27 @@
   padding-right: 10px;
   border-bottom: 1px solid @base;
 
-  &--activ {
-    background-color: @light;
+  @keyframes scale {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(1.1);
+    }
   }
+
+  &:hover {
+    animation-name: scale;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    border-bottom: 1px solid @light;
+
+
+    a {
+      color: @light;
+    }
+  }
+
 
   .lg-block({
     margin-right: 10px;
@@ -264,7 +283,7 @@
     &:hover {
 
       a {
-        color: @base;
+        color: @light;
       }
     }
 
@@ -341,8 +360,7 @@
   }
 }
 
-.main-nav__item-desk {
-
+.main-nav__base-list {
   .xxs-block({
     display: none;
   });
@@ -352,10 +370,8 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    width: 15%;
+    width: 100%;
     margin-left: -30px;
-    padding-top: 10px;
-    padding-bottom: 10px;
     padding-left: 30px;
     padding-right: 30px;
     background-color: @base;
@@ -364,18 +380,58 @@
     0 10px 0 @base,
       0 -10px 0 @base;
 
+  });
+
+}
+
+.main-nav__list-desk {
+  .xxs-block({
+    display: none;
+  });
+
+  .lg-block({
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+  });
+}
+
+.main-nav__item-desk {
+
+  .lg-block({
+    display: flex;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 12px;
+    padding-right: 12px;
+
+
     a {
       font-size: 20px;
-
       text-decoration: none;
       color: @white;
     }
 
-  &:hover {
-    background-color: @light;
-    color: @light;
-  }
+    &:hover {
+      background-color: @light;
+
+    }
+
+    &--activ {
+      background-color: @light;
+      box-shadow: inset 0 -24px 0 -22px @base,
+      inset 0 24px 0 -22px @base,
+      0 10px 0 @light,
+        0 -10px 0 @light;
+    }
   });
+
+  .xlg-block({
+    padding-left: 35px;
+    padding-right: 35px;
+  });
+
 }
 
 .main-nav__contact {
@@ -385,8 +441,10 @@
 
   .lg-block({
     display: block;
-    font-size: 21px;
+    font-size: 24px;
+  line-height: 40px;
     text-align: left;
+  text-transform: uppercase;
     text-decoration: none;
     color: @white;
   });
