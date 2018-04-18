@@ -61,6 +61,7 @@
   flex-wrap: wrap;
   align-items: center;
   margin-top: 55px;
+  padding-bottom: 15px;
   text-align: center;
   background-color: fade(@white, 90%);
   border-radius: 7px;
@@ -121,11 +122,28 @@
     background-size: 100%;
     opacity: 0.9;
   }
+
+  @keyframes scale {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(1.03);
+    }
+  }
+
+  &:hover {
+    animation-name: scale;
+    animation-duration: 0.4s;
+    animation-fill-mode: forwards;
+    box-shadow: 0px 4px 4px #919191;
+    z-index: 5;
+  }
 }
 
 .production-intro__item-02 {
   &::after {
-    content: "Стикер";
+    content: "Стикеры";
   }
 }
 
