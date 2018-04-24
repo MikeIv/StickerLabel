@@ -16,6 +16,7 @@
   <!-- PRELOAD -->
   <link rel="preload" href="css/style.min.css" as="style">
   <link rel="preload" href="js/script.js" as="script">
+  <link rel="preload" href="js/popup.js" as="script">
   <link rel="preload" href="img/main-bg.jpg" as="image">
   <link rel="preload" href="fonts/FiraSans-Regular" as="font">
   <link rel="preload" href="fonts/FiraSans-Italic" as="font">
@@ -115,7 +116,7 @@
     <h3 class="contact__header-section2">Почта</h3>
     <p class="contact__txt">info@sticker-label.ru</p>
     <a href="#" class="contact__btn button">Задать вопрос</a>
-    <a href="#" class="contact__btn button">Заказать</a>
+    <a class="order-link contact__btn button" href="#" >Заказать</a>
   </section>
 
 </main>
@@ -163,20 +164,40 @@
 
 </footer>
 
+<section class="modal modal-order wrapper">
+  <h2 class="form-block__header-form">Пожалуйста заполните форму:</h2>
+  <div class="form-block__wrapper">
+    <form class="form" action="send.php" method="post">
+      <fieldset class="form__person">
+        <div class="form__field">
+          <label for="your-name" class="form__name">Имя:</label>
+          <input type="text" class="form__input" id="your-name" name="name" placeholder="Введите ваше имя *" required>
+        </div>
+      </fieldset>
+      <fieldset class="form__person">
+        <h2 class="form__title form__title--hidden">Контактная информация</h2>
+        <div class="form__wrap">
+          <div class="form__field form__field--contact">
+            <label for="phone" class="form__name">Номер телефона:</label>
+            <input type="tel" class="form__input" id="phone" name="phone" placeholder="+7 (ххх) ххх хх хх *"
+                   required>
+          </div>
+          <div class="form__field form__field--contact">
+            <label for="your-email" class="form__name">Адрес электронной почты:</label>
+            <input type="email" class="form__input" id="your-email" name="email" placeholder="Введите почту *" required>
+          </div>
+        </div>
+      </fieldset>
+      <div class="form__end">
+        <button class="form__send" type="submit">Отправить данные</button>
+        <p class="form__text"><span class="form__star">*</span> — обязательные поля</p>
+        <p class="form__text form__text--hidden"><span class="form__star">*</span> — обязательные для заполнения поля</p>
+      </div>
+    </form>
+  <button class="modal-close" type="button">Закрыть</button>
+</section>
 
-
-<script src="js/vendor/modernizr-3.5.0.min.js"></script>
-<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-<script>window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>')</script>
-<script src="js/plugins.js"></script>
-<script src="js/main.js"></script>
-
-<!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
-<script>
-  window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
-  ga('create','UA-XXXXX-Y','auto');ga('send','pageview')
-</script>
-<script src="https://www.google-analytics.com/analytics.js" async defer></script>
 <script src="js/script.js"></script>
+<script src="js/popup.js"></script>
 </body>
 </html>

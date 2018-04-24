@@ -83,7 +83,7 @@
     <h3 class="about__header-section2">Первоклассное оборудование основа успеха</h3>
     <p class="about__txt">Мы в своей работе используем рулонные печатные машины HP Indigo, что отлично зарекомендовали себя как одни из лучших в своем сегменте. Они гарантируют высокое качество печати (даже выше, чем во флексографии), возможность оперативно изготавливать даже большие тиражи, а также создавать оригинальные упаковки.</p>
     <p class="about__txt">Вам не придется тратить бюджет на подготовительные предпечатные работы. Здесь всего этого нет. Вы платите только за результат. Отсутствие печатных форм один из главных ключей к доступной стоимости. Ну и самое главное не обязательно печатать только крупные тиражи. Можно заказать даже небольшое количество экземпляров и заказывать новые партии по мере необходимости. Обращайтесь в любое время и пользуйтесь услугами профессионалов в полиграфии.</p>
-    <a href="#" class="about__btn button">Задать вопрос</a>
+    <a class="order-link intro__btn button" href="#" >Заказать</a>
     <a href="contact.html" class="about__btn button">Контакты</a>
   </section>
 
@@ -131,19 +131,40 @@
 </footer>
 
 
+<section class="modal modal-order wrapper">
+  <h2 class="form-block__header-form">Пожалуйста заполните форму:</h2>
+  <div class="form-block__wrapper">
+    <form class="form" action="send.php" method="post">
+      <fieldset class="form__person">
+        <div class="form__field">
+          <label for="your-name" class="form__name">Имя:</label>
+          <input type="text" class="form__input" id="your-name" name="name" placeholder="Введите ваше имя *" required>
+        </div>
+      </fieldset>
+      <fieldset class="form__person">
+        <h2 class="form__title form__title--hidden">Контактная информация</h2>
+        <div class="form__wrap">
+          <div class="form__field form__field--contact">
+            <label for="phone" class="form__name">Номер телефона:</label>
+            <input type="tel" class="form__input" id="phone" name="phone" placeholder="+7 (ххх) ххх хх хх *"
+                   required>
+          </div>
+          <div class="form__field form__field--contact">
+            <label for="your-email" class="form__name">Адрес электронной почты:</label>
+            <input type="email" class="form__input" id="your-email" name="email" placeholder="Введите почту *" required>
+          </div>
+        </div>
+      </fieldset>
+      <div class="form__end">
+        <button class="form__send" type="submit">Отправить данные</button>
+        <p class="form__text"><span class="form__star">*</span> — обязательные поля</p>
+        <p class="form__text form__text--hidden"><span class="form__star">*</span> — обязательные для заполнения поля</p>
+      </div>
+    </form>
+    <button class="modal-close" type="button">Закрыть</button>
+</section>
 
-<script src="js/vendor/modernizr-3.5.0.min.js"></script>
-<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-<script>window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>')</script>
-<script src="js/plugins.js"></script>
-<script src="js/main.js"></script>
-
-<!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
-<script>
-  window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
-  ga('create','UA-XXXXX-Y','auto');ga('send','pageview')
-</script>
-<script src="https://www.google-analytics.com/analytics.js" async defer></script>
 <script src="js/script.js"></script>
+<script src="js/popup.js"></script>
 </body>
 </html>
