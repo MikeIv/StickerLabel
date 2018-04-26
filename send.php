@@ -20,7 +20,7 @@ $email = trim($email);
 //echo $age;
 //echo "<br>";
 //echo $email;
-if (mail("ivanov@etiketki24.ru", "Заявка с сайта", "Имя: ".$name.".\n Телефон: ".$phone.".\n E-mail: ".$email , "From: ivanov@etiketki24.ru \r\n"))
+if (mail("ivanov@etiketki24.ru", "Заявка с сайта", "Имя: ".$name.".\n Телефон: ".$phone.".\n E-mail: ".$email , "From: info@sticker-label.ru \r\n"))
  {     echo "Сообщение успешно отправлено. Вернитесь, пожалуйста, на главную страницу";
 } else {
     echo "при отправке сообщения возникли ошибки";
